@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "python-poetry-template"
+version = "0.1.0"
+description = "Python poetryのtemplateリポジトリ"
+authors = ["Takahashi Katsuyuki <takahashi.k@world-wing.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pyproject-flake8 = "^6.0.0.post1"
+black = "^23.7.0"
+isort = "^5.12.0"
+taskipy = "^1.12.0"
+pytest = "^7.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+main = "python src/main.py"
+format = "black src"
+sort = "isort src"
+lint = "pflake8 src"
+
+
+[tool.black]
+line-length = 100
+
+
+[tool.isort]
+# see: https://pycqa.github.io/isort/docs/configuration/multi_line_output_modes.html
+profile = "black"
+line_length = 100
+import_heading_stdlib = "Standard Library"
+import_heading_thirdparty = "Third Party Library"
+import_heading_firstparty = "First Party Library"
+import_heading_localfolder = "Local Library"
+multi_line_output = 3
+include_trailing_comma = true
+
+
+[tool.flake8]
+# see: https://flake8.pycqa.org/en/latest/user/options.html#index-of-options
+max-line-length = 100
+# see: https://flake8.pycqa.org/en/latest/user/error-codes.html
+extend-ignore = ["E203", "W503"]
+exclude = [".venv", ".git", "__pycache__"]
+max-complexity = 10
