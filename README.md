@@ -36,8 +36,9 @@ poetry shell
 `taskipy`でタスクランナーとして次のコマンドを登録してあります。
 
 ```bash
-poetry run task main   # python src/main.py
-poetry run task sort   # isort src
-poetry run task format # black src
-poetry run task lint   # pflake8 src
+poetry run task test
+poetry run task test
+poetry run task format
+poetry run task lint
+poetry run task docs
 ```
