@@ -1,3 +1,17 @@
+# dev
+.env
+
+
 # poetry
 .venv/
 poetry.lock
+
+# pytest
+.coverage
+.pytest_cache
+
+# build
+dist
+
+# docs
+docs/build
