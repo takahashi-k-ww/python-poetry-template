@@ -47,7 +47,6 @@ flake8-unused-arguments = "^0.0.13"
 flake8-pytest-style = "^1.7.2"
 pep8-naming = "^0.13.3"
 mypy = "^1.5.1"
-pre-commit = "^3.4.0"
 
 
 [build-system]

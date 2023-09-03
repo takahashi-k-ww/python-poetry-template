@@ -1,10 +1,12 @@
 # dev
 .env
 
-
 # poetry
 .venv/
 poetry.lock
+
+# mypy
+.mypy_cache
 
 # pytest
 .coverage
